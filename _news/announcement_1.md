@@ -9,10 +9,6 @@ related_posts: false
 "Insights into Quantum Algorithms & Complexity"
 
 ***
-
-Our guest speaker, , introduced the motivation behind quantum computing and the basics of quantum computing. He also discussed the quantum algorithms for the problems of factoring and searching. The discussion also included the basics of quantum complexity classes.
-
-
 We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri.
 
 Event Details:
