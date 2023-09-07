@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Insights into Quantum Algorithms & Complexity"
-date: 2023-09-06 21:00:00+0530
+date: 2022-09-06 21:00:00+0530
 inline: false
 related_posts: false
 ---
