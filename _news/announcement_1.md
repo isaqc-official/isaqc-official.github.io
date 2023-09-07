@@ -1,15 +1,15 @@
 ---
 layout: post
-title: A long announcement with details
+title: "Insights into Quantum Algorithms & Complexity"
 date: 2023-09-06 21:00:00+0530
 inline: false
 related_posts: false
 ---
+We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri.
 
-"Insights into Quantum Algorithms & Complexity"
 
 ***
-We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri.
+
 
 Event Details:
 
@@ -21,19 +21,15 @@ Venue: Online (Zoom)
 #### Topics to be Covered
 
 1. Motivation Behind Quantum Computing:
-
-Delve into the driving forces and groundbreaking potential of quantum computing, as Anurudh unveils the problems it aims to solve and the advantages it offers over classical computing.
-
+    Delve into the driving forces and groundbreaking potential of quantum computing, as Anurudh unveils the problems it aims to solve and the advantages it offers over classical computing.
 2. Basics of Quantum Computing:
 
-Explore the foundational concepts of quantum computing, including qubits, quantum gates, and quantum entanglement. Anurudh will simplify these intricate ideas, making them accessible to all.
-
+    Explore the foundational concepts of quantum computing, including qubits, quantum gates, and quantum entanglement. Anurudh will simplify these intricate ideas, making them accessible to all.
 3. Introduction to Quantum Complexity Classes:
 
-Anurudh will also touch upon the basics of quantum complexity classes, providing a glimpse into the theoretical aspects of quantum computing and its place in computational theory.
+    Anurudh will also touch upon the basics of quantum complexity classes, providing a glimpse into the theoretical aspects of quantum computing and its place in computational theory.
 
-
-Whether you are a quantum enthusiast or new to the field, this lecture promises valuable insights and knowledge. Anurudh Peduri's expertise and his ability to make complex concepts understandable will ensure an enriching experience for all attendees.
+    Whether you are a quantum enthusiast or new to the field, this lecture promises valuable insights and knowledge. Anurudh Peduri's expertise and his ability to make complex concepts understandable will ensure an enriching experience for all attendees.
 
 Stay tuned for further updates and registration details.
-***
+
