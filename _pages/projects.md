@@ -2,10 +2,10 @@
 layout: page
 title: resources
 permalink: /resources/
-description: A growing collection of your cool projects.
+description: Study material for quantum computing.
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [self-study, club-session]
 horizontal: false
 ---
 
