@@ -16,7 +16,7 @@ Event Details:
 Speaker: <a href="https://anurudhp.github.io/">Anurudh Peduri</a>
 Date: [08 September 2022]
 Time: [09:00 PM IST]
-Venue: Online (Join us from anywhere in the world!)
+Venue: Online (Zoom)
 
 #### Topics to be Covered
 
