@@ -11,25 +11,29 @@ We are excited to bring you an online lecture featuring our guest speaker, Anuru
 ***
 
 
-Event Details:
+#### Event Details:
 
-Speaker: <a href="https://anurudhp.github.io/">Anurudh Peduri</a>
-Date: [08 September 2022]
-Time: [09:00 PM IST]
-Venue: Online (Zoom)
+<ul>
+    <li>Speaker: <a href="https://anurudhp.github.io/">Anurudh Peduri</a></li>
+    <li>Date: [08 September 2022]</li>
+    <li>Time: [09:00 PM IST]</li>
+    <li> Venue: Online</li>
+</ul>
+
 
 #### Topics to be Covered
 
-1. Motivation Behind Quantum Computing:
-    Delve into the driving forces and groundbreaking potential of quantum computing, as Anurudh unveils the problems it aims to solve and the advantages it offers over classical computing.
-2. Basics of Quantum Computing:
+<ol>
+    <li>Motivation Behind Quantum Computing</li>
+    <p> Delve into the driving forces and groundbreaking potential of quantum computing, as Anurudh unveils the problems it aims to solve and the advantages it offers over classical computing.</p>
+    <li>Basics of Quantum Computing</li>
+    <p>Explore the foundational concepts of quantum computing, including qubits, quantum gates, and quantum entanglement.</p>
+    <li>Introduction to Quantum Complexity Classes</li>
+    <p>
+    The lecture will also touch upon the basics of quantum complexity classes, providing a glimpse into the theoretical aspects of quantum computing and its place in computational theory. Whether you are a quantum enthusiast or new to the field, this lecture promises valuable insights and knowledge. </p>
+</ol>
 
-    Explore the foundational concepts of quantum computing, including qubits, quantum gates, and quantum entanglement. Anurudh will simplify these intricate ideas, making them accessible to all.
-3. Introduction to Quantum Complexity Classes:
-
-    Anurudh will also touch upon the basics of quantum complexity classes, providing a glimpse into the theoretical aspects of quantum computing and its place in computational theory.
-
-    Whether you are a quantum enthusiast or new to the field, this lecture promises valuable insights and knowledge. Anurudh Peduri's expertise and his ability to make complex concepts understandable will ensure an enriching experience for all attendees.
+Anurudh Peduri's expertise and his ability to make complex concepts understandable will ensure an enriching experience for all attendees.
 
 Stay tuned for further updates and registration details.
 

@@ -9,11 +9,13 @@ We are happy to announce a lecture by <a href="https://in.linkedin.com/in/singh-
 
 ***
 
-
-Speaker: Pahulpreet Singh
-Date: [03 September 2022]
-Time: [08:00 PM IST]
-Venue: Saranga Hall, Nilgiri, IIIT Hyderabad 
+#### Event Details:
+<ul>
+    <li> Speaker: Pahulpreet Singh </li>
+    <li> Date: [03 September 2022] </li>
+    <li> Time: [08:00 PM IST] </li>
+    <li> Venue: Saranga Hall, Nilgiri, IIIT Hyderabad </li>
+</ul>
 
 #### Topics to be Covered
 
