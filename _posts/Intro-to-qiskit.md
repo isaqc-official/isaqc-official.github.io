@@ -3,8 +3,8 @@ layout: post
 title: Introduction to Qiskit
 date: 2023-09-08 09:57:00+0530
 description: A gentle introduction to programming on a quantum computer using Qiskit, a python library by IBM
-tags: Introductory
-categories: learning-to-code
+tags: introductory
+categories: quantum-programming
 giscus_comments: true
 related_posts: false
 ---
