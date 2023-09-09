@@ -8,10 +8,7 @@ profile:
   align: left
   image: ISAQCLOGO-modified.png
   image_circular: true # crops the image to make it circular
-  address: >
-    <p> IIIT Hyderabad</p>
-    <p> Prof CR Rao road, Gachibowli</p>
-    <p> Your Hyderabad, Telangana 500032</p>
+
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
