@@ -1,10 +1,10 @@
 ---
 layout: post
-title: a post with jupyter notebook
-date: 2023-07-04 08:57:00-0400
-description: an example of a blog post with jupyter notebook
-tags: formatting jupyter
-categories: sample-posts
+title: Introduction to Qiskit
+date: 2023-09-08 09:57:00+0530
+description: A gentle introduction to programming on a quantum computer using Qiskit, a python library by IBM
+tags: Introductory
+categories: learning-to-code
 giscus_comments: true
 related_posts: false
 ---
@@ -15,7 +15,7 @@ To include a jupyter notebook in a post, you can use the following code:
 
 ```html
 {::nomarkdown}
-{% assign jupyter_path = "assets/jupyter/blog.ipynb" | relative_url %}
+{% assign jupyter_path = "assets/jupyter/tut1.ipynb" | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/blog.ipynb %}{% endcapture %}
 {% if notebook_exists == "true" %}
     {% jupyter_notebook jupyter_path %}
