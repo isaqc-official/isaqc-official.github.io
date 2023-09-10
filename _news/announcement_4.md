@@ -19,13 +19,13 @@ ISAQC team.
 
 ***
 
-
 #### Event Details:
 
 <ul>
     <li> Date: [12 September 2023] </li>
     <li> Time: [09:00 PM IST to 10:00 PM IST] </li>
     <li> Venue: Online (Codeforces) </li>
+</ul>
 
 #### Prizes
 <ol>
