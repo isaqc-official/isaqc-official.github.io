@@ -263,7 +263,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['introductory', 'linear-algebra', 'puzzles', 'announcements'] # these tags will be displayed on the front page of your blog
+display_tags: ['introductory', 'linear-algebra', 'puzzles', 'chess'] # these tags will be displayed on the front page of your blog
 display_categories: ['quantum-programming', ] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
