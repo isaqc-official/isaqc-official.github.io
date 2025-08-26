@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Finale ISAQC Quantum Reading group
+title: "Finale ISAQC Quantum Reading group"
 date: 2024-03-16 17:00:00+0530
 inline: false
 related_posts: false

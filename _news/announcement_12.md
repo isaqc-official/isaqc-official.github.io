@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tiq Taq Trolled
+title: "Tiq Taq Trolled"
 date: 2025-08-12 17:00:00+0530
 inline: false
 related_posts: false

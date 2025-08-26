@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ISAQC Quantum Coding Challenge
+title: "ISAQC Quantum Coding Challenge"
 date: 2023-09-09 21:00:00+0530
 inline: false
 related_posts: false
