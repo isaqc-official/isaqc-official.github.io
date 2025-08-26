@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Talk on Geometry of Krylov Complexity
 ---
+Talk on Geometry of Krylov Complexity
+
+***
+
+
 Hello, 
 
 We will have a slightly advanced talk from 

@@ -6,6 +6,11 @@ inline: false
 related_posts: false\
 description: Starting a reading group on Quantum computing, algorithms and cryptography
 ---
+Starting a reading group on Quantum computing, algorithms and cryptography
+
+*** 
+
+
 Hello, 
 
 We are super excited to announce the start of a reading group to learn and discuss quantum computing, algorithms, cryptography and more!

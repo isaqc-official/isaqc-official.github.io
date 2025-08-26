@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: First Quantum chess tournament
 ---
+First Quantum chess tournament
+
+***
+
+
 Hey all, 
 
 

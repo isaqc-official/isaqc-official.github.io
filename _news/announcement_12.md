@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Intro to Clubs - Quantum Tic Tac Toe Tournament
 ---
+Intro to Clubs - Quantum Tic Tac Toe Tournament
+
+***
+
+
 Hey all, 
 
 Hey newcomers and quantum enthusiasts.

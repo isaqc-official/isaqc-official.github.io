@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Last session of the Introduction to Quantum Reading group
 ---
+Last session of the Introduction to Quantum Reading group
+
+***
+
+
 Hey all, 
 
 We will have our last session for the introduction to Quantum Reading group.

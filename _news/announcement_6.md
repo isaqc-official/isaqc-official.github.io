@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Talk on Information theoretic resource-breaking channels
 ---
+Talk on Information theoretic resource-breaking channels
+
+***
+
+
 Hello, 
 
 We will have a slightly advanced talk from Abhishek Mohuri, a PhD student at CQST.

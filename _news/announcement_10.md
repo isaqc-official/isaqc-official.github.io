@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Introduction to quantum chess
 ---
+Introduction to quantum chess
+
+***
+
+
 Hey all, 
 
 Excited about Chess or Quantum, or both? Welcome to Quantum Chess!

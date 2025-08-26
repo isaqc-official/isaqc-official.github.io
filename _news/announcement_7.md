@@ -6,6 +6,11 @@ inline: false
 related_posts: false
 description: Talk on Exact Quantum Speed Limits
 ---
+Talk on Exact Quantum Speed Limits
+
+***
+
+
 Hello, 
 
 We will have a slightly advanced talk from Brij Mohan, Post-doc at QIQP group, IISER Mohali.
