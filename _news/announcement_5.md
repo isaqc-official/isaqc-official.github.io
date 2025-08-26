@@ -8,9 +8,7 @@ description: Starting a reading group on Quantum computing, algorithms and crypt
 ---
 Starting a reading group on Quantum computing, algorithms and cryptography
 
-***
-
-<!--more--> 
+*** 
 
 #### Event Details:
 
@@ -30,6 +28,3 @@ Starting a reading group on Quantum computing, algorithms and cryptography
     Cheers,
     ISAQC team. 
 </p>
-
-
-
