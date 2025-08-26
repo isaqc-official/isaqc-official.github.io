@@ -1,14 +1,15 @@
 ---
 layout: post
 title: "Starting the ISAQC Quantum Reading Group"
-date: 2023-09-09 17:00:00+0530
+date: 2022-09-06 21:00:00+0530
 inline: false
 related_posts: false
 description: Starting a reading group on Quantum computing, algorithms and cryptography
 ---
 Starting a reading group on Quantum computing, algorithms and cryptography
 
-*** 
+***
+
 
 #### Event Details:
 
@@ -18,13 +19,14 @@ Starting a reading group on Quantum computing, algorithms and cryptography
     <li> Venue: Vindhya A3-117 </li>
 </ul>
 
-<p>
-    Hello, 
 
-    We are super excited to announce the start of a reading group to learn and discuss quantum computing, algorithms, cryptography and more!
 
-    Starting this week, we will meet every Tuesday 5PM to discuss the basics of quantum. Everyone is invited to join us for these talks.
+#### Topics to be Covered
 
-    Cheers,
-    ISAQC team. 
-</p>
+Hello, 
+    
+We are super excited to announce the start of a reading group to learn and discuss quantum computing, algorithms, cryptography and more!
+Starting this week, we will meet every Tuesday 5PM to discuss the basics of quantum. Everyone is invited to join us for these talks.
+
+Cheers,
+ISAQC team
