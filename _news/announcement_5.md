@@ -10,19 +10,6 @@ Starting a reading group on Quantum computing, algorithms and cryptography
 
 *** 
 
-
-Hello, 
-
-We are super excited to announce the start of a reading group to learn and discuss quantum computing, algorithms, cryptography and more!
-
-Starting this week, we will meet every Tuesday 5PM to discuss the basics of quantum. Everyone is invited to join us for these talks.
-
-Cheers,
-ISAQC team. 
-
-
-***
-
 #### Event Details:
 
 <ul>
@@ -30,5 +17,17 @@ ISAQC team.
     <li> Time: [05:00 PM IST to 06:30 PM IST] </li>
     <li> Venue: Vindhya A3-117 </li>
 </ul>
+
+<p>
+    Hello, 
+
+    We are super excited to announce the start of a reading group to learn and discuss quantum computing, algorithms, cryptography and more!
+
+    Starting this week, we will meet every Tuesday 5PM to discuss the basics of quantum. Everyone is invited to join us for these talks.
+
+    Cheers,
+    ISAQC team. 
+</p>
+
 
 

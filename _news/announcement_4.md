@@ -9,22 +9,6 @@ description: We are excited to announce the upcoming Quantum Programming Challen
 We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
 
 *** 
-
-
-Hello, 
-
-We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad! This beginner-friendly event is scheduled for September 12th (Tuesday) , from 9 PM to 10 PM (IST), and will take place on Codeforces.
-
-During this one-hour challenge, participants will have to solve two coding questions in C++. Get a chance to win prizes worth Rs. 3500!
-
-Stay tuned for the sample questions and the official challenge link.
-
-Regards,
-ISAQC team.
-
-
-***
-
 #### Event Details:
 
 <ul>
@@ -32,6 +16,20 @@ ISAQC team.
     <li> Time: [09:00 PM IST to 10:00 PM IST] </li>
     <li> Venue: Online (Codeforces) </li>
 </ul>
+
+<p>
+    Hello, 
+
+    We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad! This beginner-friendly event is scheduled for September 12th (Tuesday) , from 9 PM to 10 PM (IST), and will take place on Codeforces.
+
+    During this one-hour challenge, participants will have to solve two coding questions in C++. Get a chance to win prizes worth Rs. 3500!
+
+    Stay tuned for the sample questions and the official challenge link.
+
+    Regards,
+    ISAQC team.
+</p>
+
 
 #### Prizes
 <ol>
