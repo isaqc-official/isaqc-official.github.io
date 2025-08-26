@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Quantum Chess : an Introduction to Quantum
+title: Quantum Chess - an Introduction to Quantum
 date: 2025-02-04 17:00:00+0530
 inline: false
 related_posts: false
+description: Introduction to quantum chess
 ---
 Hey all, 
 

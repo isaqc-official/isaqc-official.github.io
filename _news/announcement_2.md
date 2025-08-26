@@ -4,6 +4,7 @@ title: Introduction to Linear Algebra and Quantum mechanics
 date: 2022-09-01 19:00:00+0530
 inline: false
 related_posts: false
+description: We are happy to announce a lecture by Pahulpreet Singh on Linear Algebra and Quantum mechanics.
 ---
 We are happy to announce a lecture by <a href="https://in.linkedin.com/in/singh-pahulpreet">Pahulpreet Singh</a> on Linear Algebra and Quantum mechanics.
 

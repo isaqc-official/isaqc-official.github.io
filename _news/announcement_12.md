@@ -4,12 +4,13 @@ title: Tiq Taq Trolled
 date: 2025-08-12 17:00:00+0530
 inline: false
 related_posts: false
+description: Intro to Clubs - Quantum Tic Tac Toe Tournament
 ---
 Hey all, 
 
 Hey newcomers and quantum enthusiasts.
 We are back with a new game this semester!
-Want an edge? Check this rulebook out, start practicing and be the saanp :)
+Want an edge? Check [this rulebook](https://www.cs.ru.nl/bachelors-theses/2025/Dieks_Scholten___1098110___Playing_Quantum_Tic-Tac-Toe.pdf) out, start practicing and be the saanp :)
 
 Exciting prizes await the winners!
 

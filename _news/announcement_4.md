@@ -4,6 +4,7 @@ title: ISAQC Quantum Coding Challenge
 date: 2023-09-09 21:00:00+0530
 inline: false
 related_posts: false
+description: We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
 ---
 Hello, 
 

@@ -4,6 +4,7 @@ title: Finale ISAQC Quantum Reading group
 date: 2024-03-16 17:00:00+0530
 inline: false
 related_posts: false
+description: Last session of the Introduction to Quantum Reading group
 ---
 Hey all, 
 

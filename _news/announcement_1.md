@@ -4,9 +4,9 @@ title: "Insights into Quantum Algorithms & Complexity"
 date: 2022-09-06 21:00:00+0530
 inline: false
 related_posts: false
+description: We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri
 ---
-We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri.
-
+We are excited to bring you an online lecture featuring our guest speaker, Anurudh Peduri
 
 ***
 

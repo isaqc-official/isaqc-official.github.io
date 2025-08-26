@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Superposition showdown: A Quantum Chess Tournament
+title: Superposition showdown - A Quantum Chess Tournament
 date: 2025-02-12 17:00:00+0530
 inline: false
 related_posts: false
+description: First Quantum chess tournament
 ---
 Hey all, 
 

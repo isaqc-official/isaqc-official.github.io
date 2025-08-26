@@ -4,6 +4,7 @@ title: ISAQC - Advanced Track Talk
 date: 2023-09-09 17:00:00+0530
 inline: false
 related_posts: false
+description: Talk on Information theoretic resource-breaking channels
 ---
 Hello, 
 
