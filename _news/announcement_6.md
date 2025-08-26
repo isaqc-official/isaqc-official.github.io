@@ -9,7 +9,7 @@ description: Talk on Information theoretic resource-breaking channels
 Talk on Information theoretic resource-breaking channels
 
 ***
-
+<!--more--> 
 #### Event Details:
 
 <ul>

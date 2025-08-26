@@ -9,7 +9,7 @@ description: Talk on Geometry of Krylov Complexity
 Talk on Geometry of Krylov Complexity
 
 ***
-
+<!--more--> 
 
 Hello, 
 
@@ -32,8 +32,6 @@ Cheers,
 
 ISAQC team. 
 
-
-***
 
 #### Event Details:
 

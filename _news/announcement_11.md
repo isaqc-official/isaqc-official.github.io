@@ -9,6 +9,7 @@ description: First Quantum chess tournament
 First Quantum chess tournament
 
 ***
+<!--more--> 
 
 
 Hey all, 
@@ -22,9 +23,6 @@ Exciting prizes await the winners!
 Cheers!
 
 ISAQC
-
-***
-
 
 #### Event Details:
 

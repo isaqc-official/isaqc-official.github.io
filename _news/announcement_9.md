@@ -9,7 +9,7 @@ description: Last session of the Introduction to Quantum Reading group
 Last session of the Introduction to Quantum Reading group
 
 ***
-
+<!--more--> 
 
 Hey all, 
 
@@ -17,8 +17,6 @@ We will have our last session for the introduction to Quantum Reading group.
 In this finale session, we will dicuss the concepts the reading group has read through over the last 6 months.
 
 All quantum enthusiasts are invited to attend this finale talk. It will give insights and hopefully inspire you to attend the upcoming reading group on basics of quantum.
-
-***
 
 #### Event Details:
 

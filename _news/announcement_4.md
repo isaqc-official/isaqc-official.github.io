@@ -8,7 +8,9 @@ description: We are excited to announce the upcoming Quantum Programming Challen
 ---
 We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
 
+
 *** 
+<!--more--> 
 #### Event Details:
 
 <ul>

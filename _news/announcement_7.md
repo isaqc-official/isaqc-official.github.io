@@ -9,7 +9,7 @@ description: Talk on Exact Quantum Speed Limits
 Talk on Exact Quantum Speed Limits
 
 ***
-
+<!--more--> 
 
 Hello, 
 
@@ -32,8 +32,6 @@ Cheers,
 
 ISAQC team. 
 
-
-***
 
 #### Event Details:
 

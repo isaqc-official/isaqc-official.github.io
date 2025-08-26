@@ -9,7 +9,7 @@ description: Introduction to quantum chess
 Introduction to quantum chess
 
 ***
-
+<!--more--> 
 
 Hey all, 
 
@@ -25,7 +25,6 @@ Cheers!
 
 ISAQC
 
-***
 
 #### Event Details:
 

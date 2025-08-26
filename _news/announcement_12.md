@@ -9,7 +9,7 @@ description: Intro to Clubs - Quantum Tic Tac Toe Tournament
 Intro to Clubs - Quantum Tic Tac Toe Tournament
 
 ***
-
+<!--more--> 
 
 Hey all, 
 
@@ -23,7 +23,7 @@ Cheers!
 
 ISAQC
 
-***
+
 
 #### Prizes:
 
