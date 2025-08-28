@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ISAQC - Advanced Track Talk"
-date: 2023-09-09 17:00:00+0530
+date: 2022-09-06 21:00:00+0530
 inline: false
 related_posts: false
 description: Talk on Information theoretic resource-breaking channels
@@ -10,7 +10,6 @@ Talk on Information theoretic resource-breaking channels
 
 ***
 
-<!--more--> 
 
 #### Event Details:
 
@@ -20,25 +19,26 @@ Talk on Information theoretic resource-breaking channels
     <li> Venue: Vindhya A3-117 </li>
 </ul>
 
-<p>
-    Hello, 
 
-    We will have a slightly advanced talk from Abhishek Mohuri, a PhD student at CQST.
 
-    Speaker: Abhishek Muhuri
+#### Topics to be Covered
 
-    Topic: Information theoretic resource-breaking channels
+Hello, 
 
-    Ref. https://arxiv.org/abs/2309.03108
+We will have a slightly advanced talk from Abhishek Mohuri, a PhD student at CQST.
 
-    **Abstract:**
+Speaker: Abhishek Muhuri
 
-        We propose the notion of process resource-breaking channels that break the resource for a quantum information processing task. We examine the same using quantum dense coding and teleportation protocols. We prove that the sets DBT (dense coding breaking) and TBT (teleportation breaking) are convex and compact and identify classical-quantum channels as their extreme points. We prove group-covariance to be a sufficient condition for channels to be DBT or TBT when they can destroy the resource of maximally entangled states. We present necessary and sufficient conditions for unital channels to be DBT for a single sender-receiver pair, while for multiple senders, the condition is sufficient. The set of qubit TBT channels is proved equivalent to qubit entanglement-breaking channels provided pre-processing is allowed. We construct witness operators to identify non-TBT(non-DBT) maps. 
+Topic: Information theoretic resource-breaking channels
 
-    Hoping to see you all at the talk.
+Ref. https://arxiv.org/abs/2309.03108
 
-    Cheers,
+**Abstract:**
 
-    ISAQC team. 
-</p>
+We propose the notion of process resource-breaking channels that break the resource for a quantum information processing task. We examine the same using quantum dense coding and teleportation protocols. We prove that the sets DBT (dense coding breaking) and TBT (teleportation breaking) are convex and compact and identify classical-quantum channels as their extreme points. We prove group-covariance to be a sufficient condition for channels to be DBT or TBT when they can destroy the resource of maximally entangled states. We present necessary and sufficient conditions for unital channels to be DBT for a single sender-receiver pair, while for multiple senders, the condition is sufficient. The set of qubit TBT channels is proved equivalent to qubit entanglement-breaking channels provided pre-processing is allowed. We construct witness operators to identify non-TBT(non-DBT) maps. 
 
+Hoping to see you all at the talk.
+
+Cheers,
+
+ISAQC team. 
