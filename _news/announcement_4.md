@@ -1,17 +1,15 @@
 ---
 layout: post
 title: "ISAQC Quantum Coding Challenge"
-date: 2023-09-09 21:00:00+0530
+date: 2022-09-06 21:00:00+0530
 inline: false
 related_posts: false
 description: We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
 ---
 We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
 
-
 ***
 
-<!--more--> 
 
 #### Event Details:
 
@@ -21,19 +19,20 @@ We are excited to announce the upcoming Quantum Programming Challenge hosted by 
     <li> Venue: Online (Codeforces) </li>
 </ul>
 
-<p>
-    Hello, 
 
-    We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad! This beginner-friendly event is scheduled for September 12th (Tuesday) , from 9 PM to 10 PM (IST), and will take place on Codeforces.
 
-    During this one-hour challenge, participants will have to solve two coding questions in C++. Get a chance to win prizes worth Rs. 3500!
+#### Topics to be Covered
 
-    Stay tuned for the sample questions and the official challenge link.
+Hello, 
 
-    Regards,
-    ISAQC team.
-</p>
+We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad! This beginner-friendly event is scheduled for September 12th (Tuesday) , from 9 PM to 10 PM (IST), and will take place on Codeforces.
 
+During this one-hour challenge, participants will have to solve two coding questions in C++. Get a chance to win prizes worth Rs. 3500!
+
+Stay tuned for the sample questions and the official challenge link.
+
+Regards,
+ISAQC team.
 
 #### Prizes
 <ol>
@@ -47,5 +46,3 @@ We are excited to announce the upcoming Quantum Programming Challenge hosted by 
         {% include figure.html path="assets/img/poster1.png" title="Poster" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-
