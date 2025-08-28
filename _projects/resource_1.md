@@ -6,7 +6,6 @@ description: "Quantum Computation and Quantum Information"
 category: self-study
 ---
 
-***
 [Nielsen and Chuang](https://profmcruz.wordpress.com/wp-content/uploads/2017/08/quantum-computation-and-quantum-information-nielsen-chuang.pdf)
 This is the main content for the "Quantum Computation and Quantum Information" resource page.
 
