@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ISAQC Quantum Coding Challenge"
-date: 2022-09-06 21:00:00+0530
+date: 2023-09-09 18:00:00+0530
 inline: false
 related_posts: false
 description: We are excited to announce the upcoming Quantum Programming Challenge hosted by the ISAQC Quantum Club at IIIT Hyderabad!
@@ -21,7 +21,7 @@ We are excited to announce the upcoming Quantum Programming Challenge hosted by 
 
 
 
-#### Topics to be Covered
+#### Event Description
 
 Hello, 
 

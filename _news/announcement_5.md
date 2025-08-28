@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Starting the ISAQC Quantum Reading Group"
-date: 2022-09-06 21:00:00+0530
+date: 2023-09-09 21:00:00+0530
 inline: false
 related_posts: false
 description: Starting a reading group on Quantum computing, algorithms and cryptography
@@ -21,7 +21,7 @@ Starting a reading group on Quantum computing, algorithms and cryptography
 
 
 
-#### Topics to be Covered
+#### Event Description
 
 Hello, 
     

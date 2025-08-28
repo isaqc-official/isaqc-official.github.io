@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ISAQC - Advanced Track Talk"
-date: 2022-09-06 21:00:00+0530
+date: 2022-09-16 21:00:00+0530
 inline: false
 related_posts: false
 description: Talk on Exact Quantum Speed Limits
@@ -21,7 +21,7 @@ Talk on Exact Quantum Speed Limits
 
 
 
-#### Topics to be Covered
+#### Event Description
 
 Hello, 
 

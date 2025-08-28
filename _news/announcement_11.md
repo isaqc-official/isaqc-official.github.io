@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Superposition showdown - A Quantum Chess Tournament"
-date: 2025-02-12 17:00:00+0530
+date: 2025-02-12 22:00:00+0530
 inline: false
 related_posts: false
 description: First Quantum chess tournament
@@ -9,8 +9,15 @@ description: First Quantum chess tournament
 First Quantum chess tournament
 
 ***
-<!--more--> 
 
+
+#### Event Details:
+
+<ul>
+    <li> Date: [15 Feb 2025]</li>
+    <li> Time: [05:00 PM IST to 06:30 PM IST] </li>
+    <li> Venue: Himalaya 104 </li>
+</ul>
 
 Hey all, 
 
@@ -23,11 +30,3 @@ Exciting prizes await the winners!
 Cheers!
 
 ISAQC
-
-#### Event Details:
-
-<ul>
-    <li> Date: [15 Feb 2025]</li>
-    <li> Time: [05:00 PM IST to 06:30 PM IST] </li>
-    <li> Venue: Himalaya 104 </li>
-</ul>

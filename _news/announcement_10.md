@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Quantum Chess - an Introduction to Quantum"
-date: 2025-02-04 17:00:00+0530
+date: 2025-02-04 22:00:00+0530
 inline: false
 related_posts: false
 description: Introduction to quantum chess
@@ -9,7 +9,17 @@ description: Introduction to quantum chess
 Introduction to quantum chess
 
 ***
-<!--more--> 
+
+
+#### Event Details:
+
+<ul>
+    <li> Date: [08 Feb 2025]</li>
+    <li> Time: [08:30 PM IST to 10:30 PM IST] </li>
+    <li> Venue: Himalaya 104 </li>
+</ul>
+
+
 
 Hey all, 
 
@@ -24,14 +34,3 @@ Shhh.. We also have some free stickers up for grab. Get an edge over your friend
 Cheers!
 
 ISAQC
-
-
-#### Event Details:
-
-<ul>
-    <li> Date: [08 Feb 2025]</li>
-    <li> Time: [08:30 PM IST to 10:30 PM IST] </li>
-    <li> Venue: Himalaya 104 </li>
-</ul>
-
-
