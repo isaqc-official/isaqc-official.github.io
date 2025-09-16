@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./Emojis/Qiskit_02.png"/>
+    <title>Qiskit Fall Fest 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'primary': 'var(--font-primary)',
+                        'secondary': 'var(--font-secondary)',
+                        'system': 'var(--font-system)',
+                        'mono': 'var(--font-mono)'
+                    },
+                    colors: {
+                        'primary': 'var(--primary)',
+                        'primary-dark': 'var(--primary-dark)',
+                        'primary-light': 'var(--primary-light)',
+                        'secondary': 'var(--secondary)',
+                        'accent': 'var(--accent)',
+                        'success': 'var(--success)',
+                        'warning': 'var(--warning)',
+                        'error': 'var(--error)',
+                        'info': 'var(--info)'
+                    },
+                    spacing: {
+                        'xs': 'var(--space-xs)',
+                        'sm': 'var(--space-sm)',
+                        'md': 'var(--space-md)',
+                        'lg': 'var(--space-lg)',
+                        'xl': 'var(--space-xl)',
+                        '2xl': 'var(--space-2xl)',
+                        '3xl': 'var(--space-3xl)'
+                    },
+                    fontSize: {
+                        'xs': 'var(--text-xs)',
+                        'sm': 'var(--text-sm)',
+                        'base': 'var(--text-base)',
+                        'lg': 'var(--text-lg)',
+                        'xl': 'var(--text-xl)',
+                        '2xl': 'var(--text-2xl)',
+                        '3xl': 'var(--text-3xl)',
+                        '4xl': 'var(--text-4xl)'
+                    },
+                    borderRadius: {
+                        'sm': 'var(--radius-sm)',
+                        'md': 'var(--radius-md)',
+                        'lg': 'var(--radius-lg)',
+                        'xl': 'var(--radius-xl)',
+                        '2xl': 'var(--radius-2xl)'
+                    },
+                    boxShadow: {
+                        'sm': 'var(--shadow-sm)',
+                        'md': 'var(--shadow-md)',
+                        'lg': 'var(--shadow-lg)',
+                        'xl': 'var(--shadow-xl)'
+                    },
+                    zIndex: {
+                        'dropdown': 'var(--z-dropdown)',
+                        'sticky': 'var(--z-sticky)',
+                        'fixed': 'var(--z-fixed)',
+                        'modal': 'var(--z-modal)',
+                        'popover': 'var(--z-popover)',
+                        'tooltip': 'var(--z-tooltip)'
+                    },
+                    transitionDuration: {
+                        'fast': '150ms',
+                        'normal': '300ms',
+                        'slow': '500ms'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Fonts */
+        @font-face {
+            font-family: 'Quicksand';
+            src: url('./fonts/Quicksand-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Quicksand';
+            src: url('./fonts/Quicksand-Bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Quantum';
+            src: url('./fonts/Quantum.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Quantum';
+            src: url('./fonts/Quantum.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            /* Font Families */
+            --font-primary: 'Quicksand', sans-serif;
+            --font-secondary: 'Quantum', sans-serif;
+            --font-system: system-ui, -apple-system, sans-serif;
+            --font-mono: 'Fira Code', 'Consolas', monospace;
+            
+            /* Colors - Dark Quantum Theme */
+            --primary: #8b5cf6;
+            --primary-dark: #7c3aed;
+            --primary-light: #c4b5fd;
+            --secondary: #f472b6;
+            --accent: #22d3ee;
+            --success: #34d399;
+            --warning: #fbbf24;
+            --error: #f87171;
+            --info: #60a5fa;
+            
+            /* Extended Dark Quantum Palette */
+            --quantum-purple: #a855f7;
+            --quantum-pink: #ec4899;
+            --quantum-cyan: #06b6d4;
+            --quantum-emerald: #10b981;
+            --quantum-violet: #6366f1;
+            
+            /* Dark Theme Backgrounds */
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --bg-tertiary: #16213e;
+            --bg-card: #1e293b;
+            --bg-hover: #334155;
+            
+            /* Dark Theme Text Colors */
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --text-inverse: #1e293b;
+            
+            /* Dark Theme Grays */
+            --gray-50: #0f172a;
+            --gray-100: #1e293b;
+            --gray-200: #334155;
+            --gray-300: #475569;
+            --gray-400: #64748b;
+            --gray-500: #94a3b8;
+            --gray-600: #cbd5e1;
+            --gray-700: #e2e8f0;
+            --gray-800: #f1f5f9;
+            --gray-900: #f8fafc;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            
+            /* Typography */
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            
+            /* Border radius */
+            --radius-sm: 0.125rem;
+            --radius-md: 0.375rem;
+            --radius-lg: 0.5rem;
+            --radius-xl: 0.75rem;
+            --radius-2xl: 1rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+            
+            /* Z-index */
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal: 1040;
+            --z-popover: 1050;
+            --z-tooltip: 1060;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease-in-out;
+            --transition-normal: 300ms ease-in-out;
+            --transition-slow: 500ms ease-in-out;
+        }
+
+        /* Custom animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes quantumOrbit {
+            0% {
+                transform: rotate(0deg) translateX(30px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            }
+        }
+
+        @keyframes quantumPulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes waveFunction {
+            0% {
+                transform: translateX(-100%) rotate(0deg);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100vw) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 25px rgba(251, 191, 36, 0.5), 0 0 35px rgba(249, 115, 22, 0.2);
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Dark Quantum-themed background */
+        .quantum-bg {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quantum-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .quantum-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .quantum-particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            animation: waveFunction 15s linear infinite;
+        }
+
+        .quantum-particle:nth-child(2) { animation-delay: -2s; top: 20%; }
+        .quantum-particle:nth-child(3) { animation-delay: -4s; top: 40%; }
+        .quantum-particle:nth-child(4) { animation-delay: -6s; top: 60%; }
+        .quantum-particle:nth-child(5) { animation-delay: -8s; top: 80%; }
+
+        /* Animation utilities */
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-slide-in-left {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 0.6s ease-out forwards;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+
+        /* Apple-style animations */
+        @keyframes appleSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes appleFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes appleBounce {
+            0%, 20%, 53%, 80%, 100% {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -8px, 0);
+            }
+            70% {
+                animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+                transform: translate3d(0, -4px, 0);
+            }
+            90% {
+                transform: translate3d(0,-1px,0);
+            }
+        }
+
+        /* Apple-style hover effects */
+        .apple-hover {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .apple-hover:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .apple-card-hover {
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .apple-card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .apple-button {
+            transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(10px);
+        }
+
+        .apple-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .apple-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Parallax effect */
+        .parallax-element {
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Smooth entrance animations */
+        .fade-in-up {
+            animation: appleSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .fade-in-scale {
+            animation: appleFadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .bounce-in {
+            animation: appleBounce 1s ease forwards;
+        }
+
+        /* Stagger animation delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Dark theme body styles */
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark theme scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Focus styles */
+        .focus-ring:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Responsive utilities */
+        @media (max-width: 640px) {
+            .text-responsive-lg {
+                font-size: 1.5rem;
+            }
+            
+            .text-responsive-xl {
+                font-size: 2rem;
+            }
+        }
+
+        /* Intersection Observer animations */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+
+        /* Loading states */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Quantum-inspired effects */
+        .quantum-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .quantum-glow:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Dark theme overrides */
+        .bg-white {
+            background-color: var(--bg-card) !important;
+        }
+        
+        .bg-gray-50 {
+            background-color: var(--bg-secondary) !important;
+        }
+        
+        .bg-gray-100 {
+            background-color: var(--bg-tertiary) !important;
+        }
+        
+        .bg-blue-100 {
+            background-color: rgba(99, 102, 241, 0.2) !important;
+        }
+        
+        .bg-green-100 {
+            background-color: rgba(34, 197, 94, 0.2) !important;
+        }
+        
+        .text-blue-800 {
+            color: rgb(165, 180, 252) !important;
+        }
+        
+        .text-green-800 {
+            color: rgb(134, 239, 172) !important;
+        }
+        
+        .text-gray-900 {
+            color: var(--text-primary) !important;
+        }
+        
+        .text-gray-800 {
+            color: var(--text-primary) !important;
+        }
+        
+        .text-gray-700 {
+            color: var(--text-secondary) !important;
+        }
+        
+        .text-gray-600 {
+            color: var(--text-secondary) !important;
+        }
+        
+        .text-gray-500 {
+            color: var(--text-muted) !important;
+        }
+        
+        .border-gray-200 {
+            border-color: var(--gray-600) !important;
+        }
+        
+        .border-gray-300 {
+            border-color: var(--gray-500) !important;
+        }
+
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 font-primary">
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 shadow-lg fixed w-full top-0 z-fixed">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./Illustrations/qiskit logo.svg" alt="Qiskit Logo" class="w-10 h-10 invert">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-100 font-secondary">Qiskit Fall Fest</h1>
+                        <p class="text-sm text-gray-400">2025</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#schedule" class="text-gray-300 hover:text-primary transition-colors font-medium">Schedule</a>
+                    <a href="#speakers" class="text-gray-300 hover:text-primary transition-colors font-medium">Speakers</a>
+                    <a href="#register" class="text-gray-300 hover:text-primary transition-colors font-medium">Register</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#register" class="apple-button bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                        Join Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden mt-4 border-t pt-4 hidden" id="mobile-menu">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-primary transition-colors font-medium">About</a>
+                    <a href="#schedule" class="text-gray-300 hover:text-primary transition-colors font-medium">Schedule</a>
+                    <a href="#speakers" class="text-gray-300 hover:text-primary transition-colors font-medium">Speakers</a>
+                    <a href="#register" class="text-gray-300 hover:text-primary transition-colors font-medium">Register</a>
+                    <a href="#register" class="apple-button bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2 rounded-lg text-center font-semibold">
+                        Join Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <img src="isaqc.svg" alt="ISAQC Logo" class="fixed top-[30vh] left-1/2 transform -translate-x-1/2 max-w-[100vw] object-cover opacity-10 -z-20">
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-40 quantum-bg min-h-screen flex items-center relative pb-20">
+        <!-- Quantum particles background -->
+        <div class="quantum-particles">
+            <div class="quantum-particle"></div>
+            <div class="quantum-particle"></div>
+            <div class="quantum-particle"></div>
+        </div>
+        <img src="isaqc.svg" alt="ISAQC Logo" class="fixed top-[30vh] left-1/2 transform -translate-x-1/2 max-w-[100vw] object-cover opacity-10 -z-20">
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center">
+                <span class="font-secondary text-5xl text-red-500 self-center mb-2">ISAQC</span>
+                <span class="text-sm text-gray-400 block mb-4">presents</span>
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-secondary text-gray-100">
+                    Qiskit Fall Fest
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">2025</span>
+                </h1>
+                <!-- Organization Info -->
+                <div class="mb-12 space-y-4"> 
+                    <div class="flex flex-col items-center justify-center">
+                        <span class="text-sm text-gray-500 mr-2">In collaboration with</span><br>
+                        <div class="flex items-center">
+                            <img src="./Illustrations/IBM Quantum Logo.png" alt="IBM Quantum Logo" class="h-8 mr-2 ml-5 mb-1">
+                            <img src="./infinium.png" alt="Infinium Logo" class="h-20">
+                        </div>
+                    </div>
+                </div>
+                
+                <img src="./Emojis/Theme.png" alt="Century of Quantum" class="max-h-60 mx-auto mb-16 rounded-xl">
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#register" class="bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+                        Register Now
+                    </a>
+                    <a href="#about" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center">
+                        Learn More
+                    </a>
+                </div>
+                
+                <!-- Event Details -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span class="text-gray-700 font-medium">Oct 3-4, 2025</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <span class="text-gray-700 font-medium">IIIT Hyderabad</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span class="text-gray-700 font-medium">Free Event</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-40 bg-gray-900/20">
+        <div class="container mx-auto px-6 max-w-6xl justify-between">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-100 mb-4 font-secondary">What is Qiskit Fall Fest?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    A quantum computing celebration featuring workshops, hackathons, mini-challenges, games, and expert panels - all part of IIIT's Infinium tech fest.
+                </p>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 - Workshops -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-primary-dark rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">3 Hands-on Workshops</h3>
+                    <p class="text-gray-300">
+                        Deep-dive into quantum computing fundamentals, quantum algorithms, and practical Qiskit programming through guided workshops.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 - Mini Challenges -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-secondary to-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">3 Mini-Challenges</h3>
+                    <p class="text-gray-300">
+                        Quick problem-solving challenges to test your quantum knowledge and win exciting prizes throughout the event.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 - Mini Games -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-success rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M15 14h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">Interactive Mini-Games</h3>
+                    <p class="text-gray-300">
+                        Fun quantum-themed games and activities to learn concepts while having fun during breaks and networking sessions.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 - Hackathon -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">Hackathon with 4 Problem Statements</h3>
+                    <p class="text-gray-300">
+                        Team up and tackle real-world quantum computing challenges across four different problem domains and compete for prizes.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 - Panel Discussion -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary-dark to-primary rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">Expert Panel Discussion</h3>
+                    <p class="text-gray-300">
+                        Engage with industry experts and quantum researchers in insightful discussions about the future of quantum computing.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 - Community -->
+                <div class="bg-gradient-to-br from-gray-700/10 to-gray-700/10 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <div class="w-16 h-16 bg-gradient-to-r from-warning to-accent rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-100 mb-3">Global Quantum Community</h3>
+                    <p class="text-gray-300">
+                        Connect with quantum enthusiasts from around the world and build lasting relationships in the quantum computing ecosystem.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold font-secondary mb-2">3</div>
+                        <div class="text-blue-100">Workshops</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold font-secondary mb-2">3</div>
+                        <div class="text-blue-100">Mini-Challenges</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold font-secondary mb-2">4</div>
+                        <div class="text-blue-100">Hackathon Problems</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold font-secondary mb-2">1</div>
+                        <div class="text-blue-100">Expert Panel</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-40 bg-gray-800/20">
+        <div class="container mx-auto px-6 max-w-6xl justify-between">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-100 mb-4 font-secondary">Event Schedule</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Three days packed with quantum learning, networking, and innovation opportunities.
+                </p>
+            </div>
+            
+            <!-- Schedule Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-gray-700/10 p-2 rounded-lg shadow-lg">
+                    <button class="schedule-tab-btn px-6 py-3 rounded-md font-semibold transition-all duration-300 bg-primary text-white" data-day="day1">
+                        Oct 3
+                    </button>
+                    <button class="schedule-tab-btn px-6 py-3 rounded-md font-semibold transition-all duration-300 text-gray-600 hover:text-primary" data-day="day2">
+                        Oct 4
+                    </button>
+                    <button class="schedule-tab-btn px-6 py-3 rounded-md font-semibold transition-all duration-300 text-gray-600 hover:text-primary" data-day="day3">
+                        Oct 5
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Day 1 Schedule -->
+            <div id="day1" class="schedule-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Event Item -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1830 - 1900
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Opening
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Welcome & Opening Ceremony</h3>
+                                <p class="text-gray-600">
+                                    Join us for the official opening of Qiskit Fall Fest 2025. Meet the organizers and get an overview of what's coming.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Item -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1900 - 2000
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Workshop
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Quantum Computing Fundamentals</h3>
+                                <p class="text-gray-600">
+                                    Introduction to quantum mechanics, qubits, gates, and circuits. Perfect for beginners starting their quantum journey.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Item -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        2100 - 2200
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Workshop
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Your First Quantum Circuit</h3>
+                                <p class="text-gray-600">
+                                    Build and run your first quantum circuit using Qiskit. Learn to create, visualize, and execute quantum programs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Event Item -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        2200 - 2230
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Challenge
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Challenge 1</h3>
+                                <p class="text-gray-600">
+                                    Test your knowledge with a quick challenge on quantum gates and circuits. Win exciting prizes!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 Schedule (Hidden by default) -->
+            <div id="day2" class="schedule-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Similar structure for Day 2 -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1030 - 1200
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Workshop
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Quantum Machine Learning</h3>
+                                <p class="text-gray-600">
+                                    Discover how quantum computing can enhance machine learning algorithms and explore quantum ML frameworks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1200 - 1230
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Challenge
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Challenge 2</h3>
+                                <p class="text-gray-600">
+                                    Put your skills to the test! Work in teams to solve quantum computing challenges and compete for exciting prizes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1400 - 1430
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Challenge
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Challenge 3</h3>
+                                <p class="text-gray-600">
+                                    Put your skills to the test! Work in teams to solve quantum computing challenges and compete for exciting prizes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1430 - 1600
+                                    </div>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Discussion
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Panel Discussion</h3>
+                                <p class="text-gray-600">
+                                    Join our expert panel as they discuss the future of quantum computing and answer your burning questions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1600 - 1630
+                                    </div>
+                                    <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Showcase
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Project Showcase</h3>
+                                <p class="text-gray-600">
+                                    Join our expert panel as they discuss the future of quantum computing and answer your burning questions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        1630 - 1800
+                                    </div>
+                                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Workshop
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Qiskit Hands-On</h3>
+                                <p class="text-gray-600">
+                                    Dive deeper into Qiskit with hands-on exercises and real-world applications guided by experienced instructors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 Schedule (Hidden by default) -->
+            <div id="day3" class="schedule-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 space-y-8">
+                    <!-- Similar structure for Day 3 -->
+                    <div class="bg-gray-700/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        0900 - 2100
+                                    </div>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Hackathon
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Hackathon</h3>
+                                <p class="text-gray-600">
+                                    Full-day hackathon where teams work on solving real-world quantum computing problems. Present your solutions and compete for prizes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        0900 - 2100
+                                    </div>
+                                    <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Hackathon Showcase
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Hackathon</h3>
+                                <p class="text-gray-600">
+                                    Full-day hackathon where teams work on solving real-world quantum computing problems. Present your solutions and compete for prizes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex flex-col lg:flex-row lg:items-center justify-between">
+                            <div class="flex-1">
+                                <div class="flex items-center mb-3">
+                                    <div class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-4">
+                                        13:00 - 14:00
+                                    </div>
+                                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                        Closing
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Awards & Closing Ceremony</h3>
+                                <p class="text-gray-600">
+                                    Celebrate achievements, announce winners, and get information about future quantum events and opportunities.
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="speakers" class="py-40 bg-gray-700/10">
+        <div class="container mx-auto px-6 max-w-7xl justify-between">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-secondary">Featured Speakers</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Learn from world-renowned experts in quantum computing, researchers, and industry leaders.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gradient-to-br from-blue-800 to-blue-900 rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-24 h-24 bg-gradient-to-r from-primary to-primary-dark rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">SC</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Sarah Chen</h3>
+                    <p class="text-primary font-semibold mb-3">Senior Quantum Researcher, IBM</p>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Leading expert in quantum error correction and fault-tolerant quantum computing with over 15 years of experience.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-700 to-purple-900 rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-24 h-24 bg-gradient-to-r from-accent to-warning rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">MR</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Prof. Michael Rodriguez</h3>
+                    <p class="text-accent font-semibold mb-3">Director, MIT Quantum Information Lab</p>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Pioneer in quantum algorithms and quantum complexity theory, author of over 100 peer-reviewed papers.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-700 to-green-900 rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-24 h-24 bg-gradient-to-r from-success to-info rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-white text-2xl font-bold">EW</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Emily Watson</h3>
+                    <p class="text-success font-semibold mb-3">Principal Scientist, Google Quantum AI</p>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Leader in quantum machine learning and NISQ algorithms, keynote speaker at major quantum conferences.
+                    </p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="text-gray-400 hover:text-success transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-success transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-gradient-to-r from-primary to-primary-dark rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold mb-4 font-secondary">Want to be a Speaker?</h3>
+                    <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+                        We're always looking for passionate quantum computing experts to share their knowledge with our community.
+                    </p>
+                    <a href="mailto:isaqc@students.iiit.ac.in?subject=Speaker Application for Qiskit Fall Fest 2025" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block">
+                        Apply to Speak
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Registration Section -->
+    <section id="register" class="py-20 bg-gradient-to-br from-blue-900 via-black to-purple-900">
+        <div class="container mx-auto px-6">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-secondary">Join Qiskit Fall Fest 2025</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Registration is free and open to everyone! Whether you're a beginner or expert, join us for this exciting quantum journey.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Registration Form -->
+                <div class="bg-white rounded-2xl p-8 shadow-xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 font-secondary">Register Now</h3>
+
+                    <form class="space-y-6" id="registrationForm">
+                        <!-- Name Fields -->
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-200 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-200 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
+                        </div>
+                        
+                        <!-- Organization -->
+                        <div>
+                            <label for="organization" class="block text-sm font-semibold text-gray-200 mb-2">Organization/University</label>
+                            <input type="text" id="organization" name="organization" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
+                        </div>
+                        
+                        <!-- Experience Level -->
+                        <div>
+                            <label for="experience" class="block text-sm font-semibold text-gray-200 mb-2">Quantum Computing Experience</label>
+                            <select id="experience" name="experience" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 backdrop-blur-sm">
+                                <option value="" class="bg-gray-800">Select your experience level</option>
+                                <option value="Beginner - New to quantum computing" class="bg-gray-800">Beginner - New to quantum computing</option>
+                                <option value="Intermediate - Some experience with quantum concepts" class="bg-gray-800">Intermediate - Some experience with quantum concepts</option>
+                                <option value="Advanced - Experienced with quantum programming" class="bg-gray-800">Advanced - Experienced with quantum programming</option>
+                                <option value="Expert - Professional quantum researcher/developer" class="bg-gray-800">Expert - Professional quantum researcher/developer</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Interests -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-200 mb-2">Which events will you attend?</label>
+                            <div class="space-y-4">
+                                <label class="flex items-center group cursor-pointer">
+                                    <input type="checkbox" name="workshops" value="Workshops and Mini-Challenges" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
+                                    <span class="ml-4 text-gray-300 group-hover:text-primary transition-colors duration-300 text-base">Workshops and Mini-Challenges</span>
+                                </label>
+                                <label class="flex items-center group cursor-pointer">
+                                    <input type="checkbox" name="panel_discussion" value="Panel Discussion" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
+                                    <span class="ml-4 text-gray-300 group-hover:text-secondary transition-colors duration-300 text-base">Panel Discussion</span>
+                                </label>
+                                <label class="flex items-center group cursor-pointer">
+                                    <input type="checkbox" name="hackathon" value="Hackathon" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
+                                    <span class="ml-4 text-gray-300 group-hover:text-accent transition-colors duration-300 text-base">Hackathon</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 items-center pt-10">
+                            <input type="checkbox" name="subscribe" value="Option 1" id="subscribe" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
+                            <label for="subscribe" class="text-base text-gray-300">Subscribe to our newsletter for updates</label>
+                        </div>
+
+                        <style>
+                        .checkbox-dark {
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            background-color: var(--bg-tertiary);
+                            border: 2px solid var(--gray-600);
+                            border-radius: 0.375rem;
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            cursor: pointer;
+                            position: relative;
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .checkbox-dark:hover {
+                            border-color: var(--primary);
+                            box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+                        }
+                        
+                        .checkbox-dark:checked {
+                            background-color: var(--primary);
+                            border-color: var(--primary);
+                            box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+                        }
+                        
+                        .checkbox-dark:checked::after {
+                            content: '✔';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: white;
+                            font-size: 0.75rem;
+                            font-weight: bold;
+                        }
+                        
+                        .checkbox-dark:focus {
+                            outline: none;
+                            ring: 2px solid var(--primary);
+                            ring-opacity: 0.5;
+                        }
+                        </style>
+                        <!-- Submit Button -->
+                        <button id="regform" type="submit" class="w-full bg-gradient-to-r from-primary via-primary-dark to-secondary text-white py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm border border-primary/30 quantum-glow">
+                            <span class="flex items-center justify-center space-x-2">
+                                <span>Register for Free</span>
+                            </span>
+                        </button>
+                        <div class="mt-6 text-center text-sm text-gray-600">
+                            <!-- By registering, you agree to our <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a> -->
+                            By registering, you agree to our Terms of Service and Privacy Policy
+                        </div>
+                    </form>
+                    <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=cjvylq7q&n=n1.ratufa.io"></script>
+                </div>
+                
+                <!-- Event Details & Benefits -->
+                <div class="space-y-8">
+                    <!-- Event Info -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4 font-secondary">Event Details</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-gray-700"><strong>Dates:</strong> October 3-5, 2025</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-700"><strong>Format:</strong> IIIT Hyderabad</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></span>
+                                </svg>
+                                <span class="text-gray-700"><strong>Cost:</strong> Completely Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- What's Included -->
+                    <div class="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-6 text-white">
+                        <h4 class="text-xl font-bold mb-4 font-secondary">What's Included</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Access to all workshops and talks</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Hands-on labs with real quantum computers</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Certificate of completion</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Access to quantum computing resources</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Networking opportunities</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-blue-100">Exclusive event swag and prizes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Requirements -->
+                    <div class="bg-yellow-100 border border-yellow-200 rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-yellow-800 mb-3">Requirements</h4>
+                        <ul class="text-yellow-700 space-y-2 text-sm">
+                            <li>• Basic programming knowledge (Python recommended)</li>
+                            <li>• Computer with internet connection</li>
+                            <li>• Enthusiasm for learning quantum computing!</li>
+                            <li>• No prior quantum experience required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="./Illustrations/qiskit logo.svg" alt="Qiskit Logo" class="w-10 h-10 invert">
+                        <div>
+                            <h3 class="text-xl font-bold font-secondary">Qiskit Fall Fest</h3>
+                            <p class="text-sm text-gray-400">2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-400 mr-2">Organized by</span>
+                            <span class="text-sm font-semibold text-gray-300 font-secondary">ISAQC</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-500">In collaboration with IBM Quantum</span>
+                        </div>
+                        
+                        <div class="text-xs text-gray-500">
+                            Part of IIIT Infinium Tech Fest
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/isaqc.official" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/isaqc" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:ml-[8vw]">
+                    <h4 class="text-lg font-bold mb-6 font-secondary">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://qiskit.org" class="text-gray-300 hover:text-primary transition-colors">Qiskit</a></li>
+                        <li><a href="https://quantum.ibm.com" class="text-gray-300 hover:text-primary transition-colors">IBM Quantum</a></li>
+                        <!-- <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Learning Materials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Community Forum</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="lg:ml-[5vw]">
+                    <h4 class="text-lg font-bold mb-6 font-secondary">Contact</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:isaqc@students.iiit.ac.in" class="text-gray-300 hover:text-primary transition-colors">isaqc@students.iiit.ac.in</a>
+                        </div>
+                        <!-- <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            <span class="text-gray-300">Join our community Discord</span>
+                        </div> -->
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-300">IIIT Hyderabad, India</span>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="mt-6">
+                        <h5 class="text-sm font-semibold mb-3">Stay Updated</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="lg:max-w-[20vw] flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400">
+                            <button class="bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors">
+                                <img src="./Emojis/Entanglement.png" alt="Entanglement" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © <span class="font-secondary">ISAQC</span>, International Institute of Information Technology, Hyderabad. All rights reserved.
+                    </div>
+                    <!-- <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Code of Conduct</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Schedule tabs
+        const tabBtns = document.querySelectorAll('.schedule-tab-btn');
+        const scheduleContents = document.querySelectorAll('.schedule-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const day = btn.getAttribute('data-day');
+                
+                // Update button styles
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-white');
+                    b.classList.add('text-gray-600', 'hover:text-primary');
+                });
+                btn.classList.add('bg-primary', 'text-white');
+                btn.classList.remove('text-gray-600', 'hover:text-primary');
+                
+                // Update content visibility
+                scheduleContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+                document.getElementById(day).classList.remove('hidden');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // // Notification function
+        // function showNotification(message, type = 'info') {
+        //     const notification = document.createElement('div');
+        //     notification.className = `fixed top-24 right-4 p-4 rounded-lg shadow-lg z-50 transform transition-all duration-300 translate-x-full ${
+        //         type === 'success' ? 'bg-green-600 text-white' : 
+        //         type === 'error' ? 'bg-red-600 text-white' : 
+        //         'bg-blue-600 text-white'
+        //     }`;
+        //     notification.innerHTML = `
+        //         <div class="flex items-center space-x-2">
+        //             <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        //                 ${type === 'success' ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>' :
+        //                   type === 'error' ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>' :
+        //                   '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>'}
+        //             </svg>
+        //             <span>${message}</span>
+        //         </div>
+        //     `;
+            
+        //     document.body.appendChild(notification);
+            
+        //     // Slide in
+        //     setTimeout(() => {
+        //         notification.classList.remove('translate-x-full');
+        //     }, 100);
+            
+        //     // Auto remove after 5 seconds
+        //     setTimeout(() => {
+        //         notification.classList.add('translate-x-full');
+        //         setTimeout(() => {
+        //             document.body.removeChild(notification);
+        //         }, 300);
+        //     }, 5000);
+        // }
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Add fade-in-section class to elements that should animate
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('fade-in-section');
+                observer.observe(section);
+            });
+            
+            // Also observe feature cards and speaker cards
+            const cards = document.querySelectorAll('[class*="hover:shadow"]');
+            cards.forEach(card => {
+                card.classList.add('fade-in-section');
+                observer.observe(card);
+            });
+        });
+        
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+            
+            // Add background to header when scrolled
+            if (scrollTop > 100) {
+                header.classList.add('bg-gray-800/95', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-gray-800/95', 'backdrop-blur-sm');
+            }
+        });
+        
+        // Newsletter subscription
+        const newsletterForm = document.querySelector('footer input[type="email"]');
+        const newsletterBtn = document.querySelector('footer button');
+        
+        if (newsletterBtn) {
+            newsletterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const email = newsletterForm.value;
+                
+                if (!email) {
+                    alert('Please enter your email address.');
+                    return;
+                }
+                
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // Simulate subscription
+                newsletterBtn.innerHTML = '✓';
+                newsletterBtn.disabled = true;
+                newsletterForm.value = '';
+                
+                setTimeout(() => {
+                    newsletterBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>';
+                    newsletterBtn.disabled = false;
+                }, 3000);
+                
+                alert('Thank you for subscribing to our newsletter!');
+            });
+        }
+        
+        // Email validation helper
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Add loading states to buttons
+        document.querySelectorAll('button, a[href="#register"]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.classList.contains('hover:shadow-xl')) {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }
+            });
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+        
+        // Performance optimization: Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.classList.remove('skeleton');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+        
+        // Add some quantum-inspired particle effects (optional)
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 4px;
+                height: 4px;
+                background: rgba(59, 130, 246, 0.6);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 1000;
+                animation: float 4s ease-in-out infinite;
+            `;
+            
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = window.innerHeight + 'px';
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 4000);
+        }
+        
+        // Create particles occasionally (disabled by default for performance)
+        // setInterval(createParticle, 3000);
+    </script>
+
+</body>
+</html>
