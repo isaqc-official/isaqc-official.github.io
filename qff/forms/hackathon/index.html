@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="../Emojis/Qiskit_02.png" />
+        <title>Hackathon Team Registration - Qiskit Fall Fest 2025</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'primary': 'var(--font-primary)',
+                            'secondary': 'var(--font-secondary)',
+                            'system': 'var(--font-system)',
+                            'mono': 'var(--font-mono)'
+                        },
+                        colors: {
+                            'primary': 'var(--primary)',
+                            'primary-dark': 'var(--primary-dark)',
+                            'primary-light': 'var(--primary-light)',
+                            'secondary': 'var(--secondary)',
+                            'accent': 'var(--accent)',
+                            'success': 'var(--success)',
+                            'warning': 'var(--warning)',
+                            'error': 'var(--error)',
+                            'info': 'var(--info)'
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            /* Custom Fonts */
+            @font-face {
+                font-family: 'Quicksand';
+                src: url('../../fonts/Quicksand-Regular.ttf') format('truetype');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Quicksand';
+                src: url('../fonts/Quicksand-Bold.ttf') format('truetype');
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Quantum';
+                src: url('../fonts/Quantum.otf') format('opentype');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            :root {
+                /* Font Families */
+                --font-primary: 'Quicksand', sans-serif;
+                --font-secondary: 'Quantum', sans-serif;
+                --font-system: system-ui, -apple-system, sans-serif;
+                --font-mono: 'Fira Code', 'Consolas', monospace;
+
+                /* Colors - Dark Quantum Theme */
+                --primary: #8b5cf6;
+                --primary-dark: #7c3aed;
+                --primary-light: #c4b5fd;
+                --secondary: #f472b6;
+                --accent: #22d3ee;
+                --success: #34d399;
+                --warning: #fbbf24;
+                --error: #f87171;
+                --info: #60a5fa;
+
+                /* Dark Theme Backgrounds */
+                --bg-primary: #0f0f23;
+                --bg-secondary: #1a1a2e;
+                --bg-tertiary: #16213e;
+                --bg-card: #1e293b;
+                --bg-hover: #334155;
+
+                /* Dark Theme Text Colors */
+                --text-primary: #f8fafc;
+                --text-secondary: #cbd5e1;
+                --text-muted: #94a3b8;
+                --text-inverse: #1e293b;
+            }
+
+            body {
+                background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+                color: var(--text-primary);
+                min-height: 100vh;
+            }
+
+            .quantum-bg::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image:
+                    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(244, 114, 182, 0.12) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 40%, rgba(34, 211, 238, 0.08) 0%, transparent 50%);
+                pointer-events: none;
+            }
+
+            .form-input {
+                background-color: rgba(30, 41, 59, 0.5);
+                border: 1px solid rgba(148, 163, 184, 0.3);
+                color: var(--text-primary);
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+            }
+
+            .form-input:focus {
+                outline: none;
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+                background-color: rgba(30, 41, 59, 0.7);
+            }
+
+            .form-input::placeholder {
+                color: var(--text-muted);
+            }
+
+            .form-input:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                background-color: rgba(30, 41, 59, 0.2);
+            }
+
+            .member-card {
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .member-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .member-card:hover::before {
+                left: 100%;
+            }
+
+            .member-card.active {
+                border-color: var(--primary);
+                background-color: rgba(139, 92, 246, 0.05);
+            }
+
+            .member-number {
+                width: 40px;
+                height: 40px;
+                background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 1.2rem;
+                box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+            }
+
+            .submit-button {
+                background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .submit-button:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            }
+
+            .submit-button:active {
+                transform: translateY(0);
+            }
+
+            .submit-button:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+                transform: none !important;
+            }
+
+            .submit-button::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: translate(-50%, -50%);
+                transition: width 0.6s, height 0.6s;
+            }
+
+            .submit-button:hover::before {
+                width: 300px;
+                height: 300px;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.6s ease-out forwards;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .slide-in {
+                animation: slideIn 0.4s ease-out forwards;
+            }
+
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: var(--bg-secondary);
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: var(--primary);
+                border-radius: 4px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--primary-dark);
+            }
+
+            .error-message {
+                color: var(--error);
+                font-size: 0.875rem;
+                margin-top: 0.25rem;
+                display: none;
+            }
+
+            .error-message.show {
+                display: block;
+                animation: fadeIn 0.3s ease-out;
+            }
+
+            .success-badge {
+                background: var(--success);
+                color: white;
+                padding: 2px 8px;
+                border-radius: 12px;
+                font-size: 0.75rem;
+                font-weight: bold;
+                display: inline-block;
+                margin-left: 8px;
+            }
+
+            .form-input.error {
+                border-color: var(--error) !important;
+            }
+
+            .error-text-inline {
+                color: var(--error);
+                font-size: 0.75rem;
+                margin-top: 0.25rem;
+                display: none;
+            }
+
+            .error-text-inline.show {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body class="font-primary quantum-bg relative">
+        <!-- Fixed ISAQC Logo Background -->
+        <img src="../../isaqc.svg" alt="ISAQC Logo"
+            class="fixed top-[30vh] left-1/2 transform -translate-x-1/2 max-w-[100vw] object-cover opacity-10 -z-20">
+
+        <!-- Header -->
+        <header class="bg-gray-800/50 backdrop-blur-md border-b border-gray-700 shadow-lg fixed w-full top-0 z-50">
+            <nav class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <a href="/qff" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                            <img src="../../Illustrations/qiskit logo.svg" alt="Qiskit Logo" class="w-10 h-10 invert">
+                            <div>
+                                <h1 class="text-xl font-bold text-gray-100 font-secondary">Qiskit Fall Fest</h1>
+                                <p class="text-sm text-gray-400">2025</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-6 pt-32 pb-20">
+            <div class="max-w-4xl mx-auto">
+                <!-- Form Header -->
+                <div class="text-center mb-10 fade-in">
+                    <h2
+                        class="text-4xl font-bold mb-4 font-secondary text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                        Hackathon Team Registration
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Register your team for the QFF 2025 Hackathon
+                    </p>
+                    <p class="text-sm text-gray-400 mt-2">
+                        Teams can have 1-3 members. Team name and first member details are mandatory.
+                    </p>
+                </div>
+
+                <!-- Important Information - Moved to Top -->
+                <div class="mb-8 grid gap-6">
+                    <div class="bg-blue-900/20 border border-blue-700/30 rounded-xl p-6 fade-in">
+                        <h3 class="text-lg font-semibold text-blue-300 mb-3 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Team Requirements
+                        </h3>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li>• Teams can have 1-3 members</li>
+                            <li>• All team members must be registered for QFF 2025. If not, register at <a href="https://isaqc-official.github.io/qff" class="text-blue-400 hover:underline">isaqc-official.github.io/qff</a></li>
+                            <li>• Use the same email addresses from QFF registration</li>
+                            <li>• Team members can't be part of multiple teams</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team Registration Form -->
+                <div
+                    class="bg-gray-800/30 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-gray-700/50 fade-in">
+                    <form id="hackathonForm" class="space-y-8">
+                        <!-- Team Name -->
+                        <div>
+                            <label for="teamName" class="block text-sm font-semibold text-gray-200 mb-2">
+                                Team Name <span class="text-error">*</span>
+                            </label>
+                            <input type="text" id="teamName" name="teamName" required placeholder="Enter your team name"
+                                class="w-full px-4 py-3 rounded-lg form-input">
+                            <p class="text-xs text-gray-400 mt-1">
+                                Choose a creative name for your quantum team!
+                            </p>
+                        </div>
+
+                        <!-- Team Member 1 (Required) -->
+                        <div class="member-card bg-gray-800/20 rounded-xl p-6 border border-gray-600/50 active">
+                            <div class="flex items-center mb-4">
+                                <div class="member-number">1</div>
+                                <h3 class="text-lg font-semibold text-gray-200 ml-4">
+                                    Team Member 1
+                                    <span class="text-error text-sm font-normal">(Required)</span>
+                                </h3>
+                            </div>
+
+                            <div class="space-y-4 pl-14">
+                                <div>
+                                    <label for="member1Email" class="block text-sm font-medium text-gray-300 mb-2">
+                                        QFF Registered Email <span class="text-error">*</span>
+                                    </label>
+                                    <input type="email" id="member1Email" name="member1Email" required
+                                        placeholder="email@example.com"
+                                        class="w-full px-4 py-2 rounded-lg form-input member1-field">
+                                    <span class="error-text-inline" id="member1EmailValidError">Please enter a valid
+                                        email address</span>
+                                    <span class="error-message" id="member1EmailError">Email is required</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 2 (Optional, disabled initially) -->
+                        <div class="member-card bg-gray-800/20 rounded-xl p-6 border border-gray-600/50 opacity-50"
+                            id="member2Card">
+                            <div class="flex items-center mb-4">
+                                <div class="member-number" style="opacity: 0.6;">2</div>
+                                <h3 class="text-lg font-semibold text-gray-200 ml-4">
+                                    Team Member 2
+                                    <span class="text-gray-400 text-sm font-normal">(Optional - Complete Member 1
+                                        first)</span>
+                                </h3>
+                            </div>
+
+                            <div class="space-y-4 pl-14">
+                                <div>
+                                    <label for="member2Email" class="block text-sm font-medium text-gray-300 mb-2">
+                                        QFF Registered Email
+                                    </label>
+                                    <input type="email" id="member2Email" name="member2Email"
+                                        placeholder="email@example.com" disabled
+                                        class="w-full px-4 py-2 rounded-lg form-input member2-field">
+                                    <span class="error-text-inline" id="member2EmailValidError">Please enter a valid
+                                        email address</span>
+                                    <span class="error-message" id="member2EmailError">Email is required for this team
+                                        member</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Team Member 3 (Optional, disabled initially) -->
+                        <div class="member-card bg-gray-800/20 rounded-xl p-6 border border-gray-600/50 opacity-50"
+                            id="member3Card">
+                            <div class="flex items-center mb-4">
+                                <div class="member-number" style="opacity: 0.6;">3</div>
+                                <h3 class="text-lg font-semibold text-gray-200 ml-4">
+                                    Team Member 3
+                                    <span class="text-gray-400 text-sm font-normal">(Optional - Add Member 2
+                                        first)</span>
+                                </h3>
+                            </div>
+
+                            <div class="space-y-4 pl-14">
+                                <div>
+                                    <label for="member3Email" class="block text-sm font-medium text-gray-300 mb-2">
+                                        QFF Registered Email
+                                    </label>
+                                    <input type="email" id="member3Email" name="member3Email"
+                                        placeholder="email@example.com" disabled
+                                        class="w-full px-4 py-2 rounded-lg form-input member3-field">
+                                    <span class="error-text-inline" id="member3EmailValidError">Please enter a valid
+                                        email address</span>
+                                    <span class="error-message" id="member3EmailError">Email is required for this team
+                                        member</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="pt-6">
+                            <button type="submit"
+                                class="w-full submit-button text-white py-4 rounded-lg font-semibold text-lg relative">
+                                Register Team
+                            </button>
+                        </div>
+
+                        <!-- Terms Notice -->
+                        <div class="text-center text-xs text-gray-400 pt-4">
+                            By submitting this form, all team members confirm their participation in the QFF 2025
+                            Hackathon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="../../Illustrations/qiskit logo.svg" alt="Qiskit Logo" class="w-10 h-10 invert">
+                        <div>
+                            <h3 class="text-xl font-bold font-secondary">Qiskit Fall Fest</h3>
+                            <p class="text-sm text-gray-400">2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-sm text-gray-400 mr-2">Organized by</span>
+                            <span class="text-sm font-semibold text-gray-300 font-secondary">ISAQC</span>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <span class="text-xs text-gray-500">In collaboration with IBM Quantum</span>
+                        </div>
+                        
+                        <div class="text-xs text-gray-500">
+                            Part of IIIT Infinium Tech Fest
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/isaqc.official" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/isaqc" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:ml-[8vw]">
+                    <h4 class="text-lg font-bold mb-6 font-secondary">Resources</h4>
+                    <ul class="space-y-3">
+                        <li><a href="https://qiskit.org" class="text-gray-300 hover:text-primary transition-colors">Qiskit</a></li>
+                        <li><a href="https://quantum.ibm.com" class="text-gray-300 hover:text-primary transition-colors">IBM Quantum</a></li>
+                        <!-- <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Learning Materials</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition-colors">Community Forum</a></li> -->
+                    </ul>
+                </div>
+                
+                <div class="lg:ml-[5vw]">
+                    <h4 class="text-lg font-bold mb-6 font-secondary">Contact</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <a href="mailto:isaqc@students.iiit.ac.in" class="text-gray-300 hover:text-primary transition-colors">isaqc@students.iiit.ac.in</a>
+                        </div>
+                        <!-- <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            <span class="text-gray-300">Join our community Discord</span>
+                        </div> -->
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-300">IIIT Hyderabad, India</span>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="mt-6">
+                        <h5 class="text-sm font-semibold mb-3">Stay Updated</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="lg:max-w-[20vw] flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-gray-400">
+                            <button class="bg-primary hover:bg-primary-dark px-4 py-2 rounded-r-lg transition-colors">
+                                <img src="./Emojis/Entanglement.png" alt="Entanglement" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © <span class="font-secondary">ISAQC</span>, International Institute of Information Technology, Hyderabad. All rights reserved.
+                    </div>
+                    <!-- <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">Code of Conduct</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+        <!-- Ratufa Form Handler Script -->
+        <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=tmpu0bqy&n=n1.ratufa.io"></script>
+
+        <!-- Form Handling Script -->
+        <script>
+            // Validation functions
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function addValidation(memberNum) {
+                // Email validation
+                const emailField = document.getElementById(`member${memberNum}Email`);
+                if (emailField) {
+                    emailField.addEventListener('input', function () {
+                        const email = this.value.trim();
+                        const errorElement = document.getElementById(`member${memberNum}EmailValidError`);
+
+                        if (email && !isValidEmail(email)) {
+                            this.classList.add('error');
+                            if (errorElement) errorElement.classList.add('show');
+                        } else {
+                            this.classList.remove('error');
+                            if (errorElement) errorElement.classList.remove('show');
+                        }
+                    });
+                }
+            }
+
+            // Add validation for all members
+            addValidation(1);
+            addValidation(2);
+            addValidation(3);
+
+            // Member field references
+            const member1Fields = document.querySelectorAll('.member1-field');
+            const member2Fields = document.querySelectorAll('.member2-field');
+            const member3Fields = document.querySelectorAll('.member3-field');
+            const member2Card = document.getElementById('member2Card');
+            const member3Card = document.getElementById('member3Card');
+
+            // Check if all member 1 fields are filled
+            function checkMember1Complete() {
+                const email = document.getElementById('member1Email').value.trim();
+                return email && isValidEmail(email);
+            }
+
+            // Check if all member 2 fields are filled
+            function checkMember2Complete() {
+                const email = document.getElementById('member2Email').value.trim();
+                return email === '' || isValidEmail(email);
+            }
+
+            // Check if all member 3 fields are filled
+            function checkMember3Complete() {
+                const email = document.getElementById('member3Email').value.trim();
+                return email === '' || isValidEmail(email);
+            }
+
+            // Enable/disable member 2 based on member 1
+            function updateMember2State() {
+                if (checkMember1Complete()) {
+                    // Enable member 2
+                    member2Card.classList.remove('opacity-50');
+                    member2Fields.forEach(field => {
+                        field.disabled = false;
+                    });
+                    member2Card.querySelector('h3 span').textContent = '(Optional)';
+                } else {
+                    // Disable member 2 and clear its fields
+                    member2Card.classList.add('opacity-50');
+                    member2Fields.forEach(field => {
+                        field.disabled = true;
+                        field.value = '';
+                    });
+                    member2Card.querySelector('h3 span').textContent = '(Optional - Complete Member 1 first)';
+                    // Also update member 3 state
+                    updateMember3State();
+                }
+            }
+
+            // Enable/disable member 3 based on member 2
+            function updateMember3State() {
+                const member2Email = document.getElementById('member2Email').value.trim();
+
+                if (member2Email && isValidEmail(member2Email)) {
+                    // Enable member 3
+                    member3Card.classList.remove('opacity-50');
+                    member3Fields.forEach(field => {
+                        field.disabled = false;
+                    });
+                    member3Card.querySelector('h3 span').textContent = '(Optional)';
+                } else {
+                    // Disable member 3 and clear its fields
+                    member3Card.classList.add('opacity-50');
+                    member3Fields.forEach(field => {
+                        field.disabled = true;
+                        field.value = '';
+                    });
+                    member3Card.querySelector('h3 span').textContent = '(Optional - Add Member 2 first)';
+                }
+            }
+
+            // Validate member 1 fields on input
+            member1Fields.forEach(field => {
+                field.addEventListener('input', () => {
+                    const email = document.getElementById('member1Email').value.trim();
+
+                    if (!email) {
+                        document.getElementById('member1EmailError').classList.add('show');
+                    } else {
+                        document.getElementById('member1EmailError').classList.remove('show');
+                    }
+
+                    updateMember2State();
+                });
+            });
+
+            // Validate member 2 fields on input
+            member2Fields.forEach(field => {
+                field.addEventListener('input', () => {
+                    const email = document.getElementById('member2Email').value.trim();
+
+                    // If any field is filled, all must be filled
+                    if (email) {
+                        if (!email) {
+                            document.getElementById('member2EmailError').classList.add('show');
+                        } else {
+                            document.getElementById('member2EmailError').classList.remove('show');
+                        }
+
+                        member2Card.classList.add('active');
+                    } else {
+                        // All fields empty, remove errors
+                        document.getElementById('member2EmailError').classList.remove('show');
+                        member2Card.classList.remove('active');
+                    }
+
+                    updateMember3State();
+                });
+            });
+
+            // Validate member 3 fields on input
+            member3Fields.forEach(field => {
+                field.addEventListener('input', () => {
+                    const email = document.getElementById('member3Email').value.trim();
+
+                    // If any field is filled, all must be filled
+                    if (email) {
+                        if (!email) {
+                            document.getElementById('member3EmailError').classList.add('show');
+                        } else {
+                            document.getElementById('member3EmailError').classList.remove('show');
+                        }
+
+                        member3Card.classList.add('active');
+                    } else {
+                        // All fields empty, remove errors
+                        document.getElementById('member3EmailError').classList.remove('show');
+                        member3Card.classList.remove('active');
+                    }
+                });
+            });
+
+            // Form submission handling
+            document.getElementById('hackathonForm').addEventListener('submit', function (e) {
+                if (!document.getElementById('member2Email').value.trim()) {
+                    document.getElementById('member2Email').value = 'ignore' + Math.random().toString(36).substring(2, 15) + '@na.zz';
+                    document.getElementById('member2Email').disabled = false;
+                }
+                if (!document.getElementById('member3Email').value.trim()) {
+                    document.getElementById('member3Email').value = 'ignore' + Math.random().toString(36).substring(2, 15) + '@na.zz';
+                    document.getElementById('member3Email').disabled = false;
+                }
+
+                console.log('Form submission initiated');
+                for (let i = 1; i <= 3; i++) {
+                    const email = document.getElementById(`member${i}Email`)?.value.trim();
+
+                    if (email && !isValidEmail(email)) {
+                        alert(`Please enter a valid email for Team Member ${i}`);
+                        e.preventDefault();
+                        return;
+                    }
+                }
+
+                // Validate member 2
+                if (!checkMember2Complete()) {
+                    alert('Please complete all fields for Team Member 2 or leave them all empty.');
+                    e.preventDefault();
+                    return;
+                }
+
+                // Validate member 3
+                if (!checkMember3Complete()) {
+                    alert('Please complete all fields for Team Member 3 or leave them all empty.');
+                    e.preventDefault();
+                    return;
+                }
+
+                // Check if member 3 is filled without member 2
+                const member2Name = document.getElementById('member2Name').value.trim();
+                const member3Name = document.getElementById('member3Name').value.trim();
+
+                if (member3Name && !member2Name) {
+                    alert('Please add Team Member 2 before adding Team Member 3.');
+                    e.preventDefault();
+                    return;
+                }
+            });
+
+            // Add fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        </script>
+    </body>
+
+</html>
