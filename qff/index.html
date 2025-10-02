@@ -654,9 +654,9 @@
                 
                 <!-- CTA Button -->
                 <div class="hidden md:block">
-                    <a href="#register" class="apple-button bg-gradient-to-r from-primary to-primary-dark text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
-                        Join Now
-                    </a>
+                    <button disabled class="apple-button bg-gray-600 text-gray-300 px-6 py-2 rounded-lg transition-all duration-300 font-semibold cursor-not-allowed">
+                        Registrations Closed
+                    </button>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -708,7 +708,7 @@
                     <div class="flex flex-col items-center justify-center">
                         <span class="text-sm text-gray-500 mr-2">In collaboration with</span><br>
                         <div class="flex items-center">
-                            <img src="./Illustrations/IBM Quantum Logo.png" alt="IBM Quantum Logo" class="h-8 mr-2 ml-5 mb-1">
+                            <img src="./Illustrations/IBM Quantum Logo.png" alt="IBM Quantum Logo" class="invert h-8 mr-2 ml-5 mb-1">
                             <img src="./infinium.png" alt="Infinium Logo" class="h-20">
                         </div>
                     </div>
@@ -718,8 +718,8 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <a href="#register" class="bg-gradient-to-r from-primary to-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
-                        Register Now
+                    <a href="#register" class="bg-gradient-to-r from-gray-700 to-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+                        Registrations Closed
                     </a>
                     <a href="#about" class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center">
                         Learn More
@@ -1256,7 +1256,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Registration Section -->
     <section id="register" class="py-20 bg-gradient-to-br from-blue-900 via-black to-purple-900">
@@ -1272,203 +1272,31 @@
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <!-- Registration Form -->
                 <div class="bg-white rounded-2xl p-8 shadow-xl">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 font-secondary">Register Now</h3>
-
-                    <form class="space-y-6" id="registrationForm">
-                        <!-- Name Fields -->
-                        <div>
-                            <label for="name" class="block text-sm font-semibold text-gray-200 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
-                        </div>
-                        
-                        <!-- Email -->
-                        <div>
-                            <label for="email" class="block text-sm font-semibold text-gray-200 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
-                        </div>
-                        
-                        <!-- Organization -->
-                        <div>
-                            <label for="organization" class="block text-sm font-semibold text-gray-200 mb-2">Organization/University</label>
-                            <input type="text" id="organization" name="organization" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 placeholder-gray-400 backdrop-blur-sm">
-                        </div>
-                        
-                        <!-- Experience Level -->
-                        <div>
-                            <label for="experience" class="block text-sm font-semibold text-gray-200 mb-2">Quantum Computing Experience</label>
-                            <select id="experience" name="experience" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary-light transition-all duration-300 text-gray-100 backdrop-blur-sm">
-                                <option value="" class="bg-gray-800">Select your experience level</option>
-                                <option value="Beginner - New to quantum computing" class="bg-gray-800">Beginner - New to quantum computing</option>
-                                <option value="Intermediate - Some experience with quantum concepts" class="bg-gray-800">Intermediate - Some experience with quantum concepts</option>
-                                <option value="Advanced - Experienced with quantum programming" class="bg-gray-800">Advanced - Experienced with quantum programming</option>
-                                <option value="Expert - Professional quantum researcher/developer" class="bg-gray-800">Expert - Professional quantum researcher/developer</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Interests -->
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-200 mb-2">Which events will you attend?</label>
-                            <div class="space-y-4">
-                                <label class="flex items-center group cursor-pointer">
-                                    <input type="checkbox" name="workshops" value="Workshops and Mini-Challenges" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
-                                    <span class="ml-4 text-gray-300 group-hover:text-primary transition-colors duration-300 text-base">Workshops and Mini-Challenges</span>
-                                </label>
-                                <label class="flex items-center group cursor-pointer">
-                                    <input type="checkbox" name="panel_discussion" value="Panel Discussion" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
-                                    <span class="ml-4 text-gray-300 group-hover:text-secondary transition-colors duration-300 text-base">Panel Discussion</span>
-                                </label>
-                                <label class="flex items-center group cursor-pointer">
-                                    <input type="checkbox" name="hackathon" value="Hackathon" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
-                                    <span class="ml-4 text-gray-300 group-hover:text-accent transition-colors duration-300 text-base">Hackathon</span>
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4 items-center pt-10">
-                            <input type="checkbox" name="subscribe" value="Option 1" id="subscribe" class="w-5 h-5 text-primary focus:ring-primary focus:ring-2 bg-gray-800 border-gray-600 rounded-lg transition-all duration-300 checkbox-dark">
-                            <label for="subscribe" class="text-base text-gray-300">Subscribe to our newsletter for updates</label>
-                        </div>
-
-                        <style>
-                        .checkbox-dark {
-                            appearance: none;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            background-color: var(--bg-tertiary);
-                            border: 2px solid var(--gray-600);
-                            border-radius: 0.375rem;
-                            width: 1.25rem;
-                            height: 1.25rem;
-                            cursor: pointer;
-                            position: relative;
-                            transition: all 0.3s ease;
-                        }
-                        
-                        .checkbox-dark:hover {
-                            border-color: var(--primary);
-                            box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
-                        }
-                        
-                        .checkbox-dark:checked {
-                            background-color: var(--primary);
-                            border-color: var(--primary);
-                            box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
-                        }
-                        
-                        .checkbox-dark:checked::after {
-                            content: '✔';
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            color: white;
-                            font-size: 0.75rem;
-                            font-weight: bold;
-                        }
-                        
-                        .checkbox-dark:focus {
-                            outline: none;
-                            ring: 2px solid var(--primary);
-                            ring-opacity: 0.5;
-                        }
-                        </style>
-                        <!-- Submit Button -->
-                        <button id="regform" type="submit" class="w-full bg-gradient-to-r from-primary via-primary-dark to-secondary text-white py-4 rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 backdrop-blur-sm border border-primary/30 quantum-glow">
-                            <span class="flex items-center justify-center space-x-2">
-                                <span>Register for Free</span>
-                            </span>
-                        </button>
-                        <div class="mt-6 text-center text-sm text-gray-600">
-                            <!-- By registering, you agree to our <a href="#" class="text-primary hover:underline">Terms of Service</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a> -->
-                            By registering, you agree to our Terms of Service and Privacy Policy
-                        </div>
-                    </form>
-                    <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=cjvylq7q&n=n1.ratufa.io"></script>
-                </div>
-                
-                <!-- Event Details & Benefits -->
-                <div class="space-y-8">
-                    <!-- Event Info -->
-                    <div class="bg-white rounded-xl p-6 shadow-lg">
-                        <h4 class="text-xl font-bold text-gray-900 mb-4 font-secondary">Event Details</h4>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3">
-                                <span class="text-gray-700"><strong>Dates:</strong> October 3-5, 2025</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="text-gray-700"><strong>Format:</strong> Hybrid</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <span class="text-gray-700"><strong>Cost:</strong> Completely Free</span>
-                            </div>
-                        </div>
-                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 font-secondary">Registrations Closed</h3>
                     
-                    <!-- What's Included -->
-                    <div class="bg-gradient-to-br from-primary to-primary-dark rounded-xl p-6 text-white">
-                        <h4 class="text-xl font-bold mb-4 font-secondary">What's Included</h4>
-                        <div class="space-y-3">
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Access to all workshops and talks</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Hands-on labs with IBM cloud quantum computers</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Certificate of completion</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Access to quantum computing resources</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Networking opportunities</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">Exclusive event swag for in-person attendees</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">3 problem statements for all hackathon attendees</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 text-blue-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                                <span class="text-blue-100">1 exclusive problem statement for in-person hackathon attendees</span>
-                            </div>
-                        </div>
+                    <div class="text-center py-12">
+                        <img src="./Emojis/Qiskit_02.png" alt="Qiskit Logo" class="w-24 h-24 mx-auto mb-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">Thank you for your interest!</h4>
+                        <p class="text-gray-600 mb-6">
+                            Registrations for Qiskit Fall Fest 2025 are now closed. <br>Feel free to mail us at <a href="mailto:isaqc@students.iiit.ac.in">isaqc@students.iiit.ac.in</a> for any queries.
+                            <br>Follow us on social media to stay updated about future events.
+                        </p>
+                        <p class="text-sm text-gray-500">
+                            Registrations closed on October 02, 2025 at 2000 hours IST
+                        </p>
                     </div>
-                    
-                    <!-- Requirements -->
-                    <div class="bg-yellow-100 border border-yellow-200 rounded-xl p-6">
-                        <h4 class="text-lg font-bold text-yellow-800 mb-3">Requirements</h4>
-                        <ul class="text-yellow-700 space-y-2 text-sm">
-                            <li>• Basic programming knowledge (Python recommended)</li>
-                            <li>• Computer with internet connection</li>
-                            <li>• Enthusiasm for learning quantum computing!</li>
-                            <li>• No prior quantum experience required</li>
-                        </ul>
-                    </div>
+
+                    <div class="flex justify-center space-x-6 mt-8">
+                        <a href="https://www.instagram.com/isaqc.official" class="text-gray-400 hover:text-primary transition-colors">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/isaqc" class="text-gray-400 hover:text-primary transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
